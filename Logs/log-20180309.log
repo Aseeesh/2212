@@ -1,0 +1,115 @@
+2018-03-09T16:14:32.9179080+05:45  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=QuickApp " (9958f5bb)
+2018-03-09T16:14:33.7654602+05:45  [FTL] Error whilst creating and seeding database (944fb156)
+System.AggregateException: One or more errors occurred. (Login failed for user 'IIS APPPOOL\testweb'.) ---> System.Data.SqlClient.SqlException: Login failed for user 'IIS APPPOOL\testweb'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.<ExistsAsync>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<MigrateAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\abhiBam\QuickApp-master\src\DAL\DatabaseInitializer.cs:line 48
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at QuickApp.Program.Main(String[] args) in D:\abhiBam\QuickApp-master\src\QuickApp\Program.cs:line 35
+---> (Inner Exception #0) System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'IIS APPPOOL\testweb'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.<ExistsAsync>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<MigrateAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\abhiBam\QuickApp-master\src\DAL\DatabaseInitializer.cs:line 48
+ClientConnectionId:07da1b22-45ae-4ca6-a212-7517d77e865e
+Error Number:18456,State:1,Class:14<---
+
+2018-03-09T16:14:34.8076537+05:45 0HLC5L2JERT6I:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:3333/   (ca22a1cb)
+2018-03-09T16:14:35.2182140+05:45 0HLC5L2JERT6I:00000001 [WRN] Disabling the transport security requirement is not recommended in production. Consider setting 'OpenIdConnectServerOptions.AllowInsecureHttp' to 'false' to prevent the OpenID Connect server middleware from serving non-HTTPS requests. (4405708c)
+2018-03-09T16:14:36.0871098+05:45 0HLC5L2JERT6I:00000001 [INF] Executing action method "QuickApp.Controllers.HomeController.Index (QuickApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-09T16:14:36.1506549+05:45 0HLC5L2JERT6I:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-03-09T16:14:38.1743654+05:45 0HLC5L2JERT6I:00000001 [INF] Executed action "QuickApp.Controllers.HomeController.Index (QuickApp)" in 2153.124ms (afa2e885)
+2018-03-09T16:14:38.1818548+05:45 0HLC5L2JERT6I:00000001 [INF] Request finished in 3387.6487ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-09T16:15:14.3420940+05:45 0HLC5L2JERT6I:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:3333/dist/main-client.js?v=iBmjiO8dSdlkZxbxEXlk0QLgDnOWtlp41x7afB11_90   (ca22a1cb)
+2018-03-09T16:15:14.3477286+05:45 0HLC5L2JERT6I:00000002 [INF] Sending file. Request path: '"/dist/main-client.js"'. Physical path: '"D:\abhiBam\published\wwwroot\dist\main-client.js"' (27b0a520)
+2018-03-09T16:15:14.3801048+05:45 0HLC5L2JERT6J:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:3333/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2018-03-09T16:15:14.3805477+05:45 0HLC5L2JERT6J:00000001 [INF] Sending file. Request path: '"/dist/vendor.css"'. Physical path: '"D:\abhiBam\published\wwwroot\dist\vendor.css"' (27b0a520)
+2018-03-09T16:15:14.4080103+05:45 0HLC5L2JERT6K:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:3333/dist/vendor.js?v=RE3SzU2SNxP40p2MSD9M3ctowKG940ItGuCCT_QzcAY   (ca22a1cb)
+2018-03-09T16:15:14.4082289+05:45 0HLC5L2JERT6K:00000001 [INF] Sending file. Request path: '"/dist/vendor.js"'. Physical path: '"D:\abhiBam\published\wwwroot\dist\vendor.js"' (27b0a520)
+2018-03-09T16:15:14.4130452+05:45 0HLC5L2JERT6J:00000001 [INF] Request finished in 32.8669ms 200 text/css (791a596a)
+2018-03-09T16:15:14.5053120+05:45 0HLC5L2JERT6I:00000002 [INF] Request finished in 162.6937ms 200 application/javascript (791a596a)
+2018-03-09T16:15:14.5523904+05:45 0HLC5L2JERT6K:00000001 [INF] Request finished in 144.3722ms 200 application/javascript (791a596a)
+2018-03-09T16:15:17.2674623+05:45 0HLC5L2JERT6J:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:3333/dist/38ca0ead98a00e42ee67bdeac6191f4e.jpg   (ca22a1cb)
+2018-03-09T16:15:17.2682648+05:45 0HLC5L2JERT6J:00000002 [INF] Sending file. Request path: '"/dist/38ca0ead98a00e42ee67bdeac6191f4e.jpg"'. Physical path: '"D:\abhiBam\published\wwwroot\dist\38ca0ead98a00e42ee67bdeac6191f4e.jpg"' (27b0a520)
+2018-03-09T16:15:17.2760472+05:45 0HLC5L2JERT6I:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:3333/dist/7a04ba73791b7076b7e9c64d549ddd01.jpg   (ca22a1cb)
+2018-03-09T16:15:17.2762769+05:45 0HLC5L2JERT6I:00000003 [INF] Sending file. Request path: '"/dist/7a04ba73791b7076b7e9c64d549ddd01.jpg"'. Physical path: '"D:\abhiBam\published\wwwroot\dist\7a04ba73791b7076b7e9c64d549ddd01.jpg"' (27b0a520)
+2018-03-09T16:15:17.2962018+05:45 0HLC5L2JERT6K:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:3333/dist/a48f1167256d678015826c6919b16aa6.jpg   (ca22a1cb)
+2018-03-09T16:15:17.2969969+05:45 0HLC5L2JERT6K:00000002 [INF] Sending file. Request path: '"/dist/a48f1167256d678015826c6919b16aa6.jpg"'. Physical path: '"D:\abhiBam\published\wwwroot\dist\a48f1167256d678015826c6919b16aa6.jpg"' (27b0a520)
+2018-03-09T16:15:17.3751268+05:45 0HLC5L2JERT6L:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:3333/dist/5d248f4ee7ff7fa566bf6fa37ad651d6.jpg   (ca22a1cb)
+2018-03-09T16:15:17.3756794+05:45 0HLC5L2JERT6L:00000001 [INF] Sending file. Request path: '"/dist/5d248f4ee7ff7fa566bf6fa37ad651d6.jpg"'. Physical path: '"D:\abhiBam\published\wwwroot\dist\5d248f4ee7ff7fa566bf6fa37ad651d6.jpg"' (27b0a520)
+2018-03-09T16:15:17.3832774+05:45 0HLC5L2JERT6J:00000002 [INF] Request finished in 115.8205ms 200 image/jpeg (791a596a)
+2018-03-09T16:15:17.4493026+05:45 0HLC5L2JERT6L:00000001 [INF] Request finished in 74.1797ms 200 image/jpeg (791a596a)
+2018-03-09T16:15:17.5040848+05:45 0HLC5L2JERT6K:00000002 [INF] Request finished in 207.6646ms 200 image/jpeg (791a596a)
+2018-03-09T16:15:17.5799426+05:45 0HLC5L2JERT6I:00000003 [INF] Request finished in 303.6924ms 200 image/jpeg (791a596a)
+2018-03-09T16:15:21.6229981+05:45 0HLC5L2JERT6L:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:3333/favicon.ico   (ca22a1cb)
+2018-03-09T16:15:21.6232578+05:45 0HLC5L2JERT6L:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\abhiBam\published\wwwroot\favicon.ico"' (27b0a520)
+2018-03-09T16:15:21.6732467+05:45 0HLC5L2JERT6L:00000002 [INF] Request finished in 50.2667ms 200 image/x-icon (791a596a)
